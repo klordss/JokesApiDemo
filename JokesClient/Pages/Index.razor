@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<h1>Jokes Demo Test</h1>
+
+<div class="joke-container">
+    <div class="joke-rectangle">
+        @if (!string.IsNullOrWhiteSpace(currentJoke))
+        {
+            <p>@currentJoke</p>
+        }
+        else
+        {
+            <p>Click the button to generate a joke.</p>
+        }
+    </div>
+    <button class="generate-button" @onclick="GenerateJoke">Generate Joke</button>
+</div>
